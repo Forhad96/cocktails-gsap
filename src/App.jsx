@@ -7,7 +7,8 @@ const App = () => {
   return (
     <main>
       <Navbar/>
-      {/* <Hero/> */}
+      <Hero/>
+      <div className='h-dvh bg-black'></div>
     </main>
   );
 };

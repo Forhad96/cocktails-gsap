@@ -11,7 +11,25 @@ const Hero = () => {
             duration:1.8,
             ease:"expo.out",
             stagger:0.05
+        });
+        gsap.from(paragraphSplit.lines,{
+            opacity:0,
+            yPercent:100,
+            duration:1.8,
+            ease:"expo.out",
+            stagger:0.06,
+            delay:1,
+        });
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:"#hero",
+                start:"top top",
+                end:"bottom top",
+                scrub:true,
+            }
         })
+        .to(".right-leaf",{y:200},0)
+        .to(".left-leaf",{y:-200},0)
     },[])
     return (
         <>
@@ -24,12 +42,12 @@ const Hero = () => {
                 <div className="space-y-5 hidden md:block">
                     <p>Coll. Crisp. Classic</p>
                     <p className="subtitle">
-                        sip the Spirit <br /> of summer
+                        savor the Essence <br /> of summer
                     </p>
                 </div>
 
                 <div className="view-cocktails">
-                    <p className="subtitle"> Every cocktail on our menu is a blend of premium ingredients, creative,flair, and timeless recipes - designed to delight your sense</p>
+                    <p className="subtitle">We craft each cocktail with premium ingredients, a dash of creativity, and a nod to timeless recipes. The result? A drink that will delight your senses.</p>
                     <a href="#cocktails">View Cocktails</a>
                 </div>
             </div>
